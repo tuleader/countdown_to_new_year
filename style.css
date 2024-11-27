@@ -26,6 +26,11 @@ body {
   transform: translate(-50%, -50%);
   font-size: 16px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ensures full viewport height */
 }
 
 .heading {
@@ -58,7 +63,8 @@ body {
   display: flex;
   justify-content: space-around;
   gap: 10px;
-  flex-wrap: wrap; /* Đảm bảo responsive trên màn hình nhỏ */
+  flex-wrap: wrap; /* Ensure responsiveness on small screens */
+  align-items: center; /* Center countdown items */
 }
 
 .box {
@@ -81,7 +87,7 @@ span.num {
   font-size: 4em;
   box-shadow: var(--color-shadow);
   border-radius: 0.1em;
-  position: relative; /* Đảm bảo các thành phần bên trong căn chỉnh đúng */
+  position: relative;
 }
 
 span.num:after {
@@ -92,7 +98,7 @@ span.num:after {
   width: 50%;
   left: 0;
   top: 0;
-  z-index: -1; /* Đảm bảo lớp này nằm dưới nội dung chính */
+  z-index: -1; /* Ensure this layer is beneath content */
 }
 
 span.text {
@@ -117,11 +123,11 @@ span.text {
   width: 300px;
   height: 170px;
   z-index: 1000;
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Hiệu ứng mượt */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .youtube-player:hover {
-  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .youtube-player iframe {
@@ -135,23 +141,34 @@ span.text {
 @media (max-width: 768px) {
   .wrapper {
     font-size: 14px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensure wrapper takes full viewport height */
   }
 
   .heading h1 {
     font-size: 4.5em;
+    color: var(--color-white);
   }
 
   .heading h3 {
     font-size: 1.4em;
+    color: var(--color-white);
   }
 
   .countdown {
-    flex-direction: column; /* Các box xếp chồng nhau trên màn hình nhỏ */
+    flex-direction: column; /* Stack countdown items on mobile */
     gap: 20px;
+    align-items: center;
   }
 
   .box {
-    width: 80%;
-    height: auto;
+    width: 80%; /* Make countdown boxes take more width */
+    height: auto; /* Allow height to adjust dynamically */
+  }
+
+  .youtube-player {
+    display: none; /* Hide YouTube player on mobile */
   }
 }
