@@ -1,42 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Countdown to new year</title>
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<html lang="vi">
+
+<head>
+  <!-- Responsive meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Charset -->
+  <meta charset="UTF-8" />
+
+  <!-- Title for SEO -->
+  <title>Tết Âm Lịch 2025 - Đếm Ngược Bao Nhiêu Ngày Đến Tết</title>
+
+  <!-- Meta tags for SEO -->
+  <meta name="description"
+    content="Đếm ngược đến Tết Âm Lịch 2025 của người Việt. Xem ngay còn bao nhiêu ngày, giờ, phút, giây đến Tết 2025! Theo dõi thời gian chuẩn bị cho dịp lễ quan trọng này.">
+  <meta name="keywords"
+    content="Tết Âm Lịch 2025, Tết Nguyên Đán, Đếm ngược Tết 2025, Bao lâu nữa đến Tết, Bao nhiêu ngày đến Tết, Tết của người Việt, Đếm ngược Tết Âm Lịch">
+  <meta name="author" content="tet2025.id.vn">
+
+  <!-- Preload Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" as="style"
+    onload="this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div>
     <div class="wrapper">
       <div class="heading">
-        <h3>Tết dương 2025</h3>
+        <h3>Tết âm lịch 2025</h3>
         <h1>2025</h1>
       </div>
-      <div class="countdown">
+      <div class="countdown" aria-label="Đếm ngược đến Tết Âm Lịch">
         <div class="box">
-          <span class="num" id="day-box">00</span>
+          <span class="num" id="day-box" aria-label="Ngày">00</span>
           <span class="text">Ngày</span>
         </div>
         <div class="box">
-          <span class="num" id="hr-box">00</span>
+          <span class="num" id="hr-box" aria-label="Giờ">00</span>
           <span class="text">Giờ</span>
         </div>
         <div class="box">
-          <span class="num" id="min-box">00</span>
+          <span class="num" id="min-box" aria-label="Phút">00</span>
           <span class="text">Phút</span>
         </div>
         <div class="box">
-          <span class="num" id="sec-box">00</span>
+          <span class="num" id="sec-box" aria-label="Giây">00</span>
           <span class="text">Giây</span>
         </div>
       </div>
     </div>
-    <!-- Script -->
-    <script src="script.js"></script>
-  </body>
+    <div class="youtube-player">
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/e0XEwVfI88Y?autoplay=1&loop=1&playlist=e0XEwVfI88Y&mute=1"
+        title="Video chào mừng Tết Âm Lịch 2025" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
+</body>
+
 </html>
